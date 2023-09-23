@@ -1,0 +1,17 @@
+---
+- name: Deploy metallb pool
+  include_tasks: metallb.yml
+
+- name: Remove metallb tmp directory used for manifests
+  file:
+    path: /tmp/k3s
+    state: absent
+
+- name: Fetch kubeconfig from first master
+  fetch:
+    src: "{{ ansible_user_dir }}/.kube/config"
+    dest: "{{ kubeconfig_dir }}/config"
+    fail_on_missing: true
+    validate_checksum: true
+    flat: yes
+  when: ansible_hostname == hostvars[groups[group_name_master | default('master')][0]]['ansible_hostname']
