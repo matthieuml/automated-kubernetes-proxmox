@@ -16,12 +16,12 @@ terraform {
 
 provider "helm" {
   kubernetes {
-    config_path    = "~/.kube/config"
-    config_context = "default"
+    config_path    = var.kubeconfig_path
+    config_context = var.kube_config_context
   }
 }
 
 provider "kubernetes" {
-  config_path    = "~/.kube/config"
-  config_context = "default"
+  config_path    = var.kubeconfig_path
+  config_context = var.kube_config_context
 }

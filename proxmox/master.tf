@@ -27,7 +27,7 @@ resource "proxmox_vm_qemu" "master_node" {
   sockets = 1
   cores   = 2
   cpu     = "host"
-  memory  = 6144
+  memory  = 3072
 
   # VM Storage Settings
   disk {

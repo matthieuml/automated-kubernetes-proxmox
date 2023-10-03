@@ -1,7 +1,7 @@
 # CONFIGURATION DATA
 
 locals {
-  ansible_dir   = "../configuration-vm-k3s-kube-metallb"
+  ansible_dir   = "./k3s-configuration"
   inventory_dir = "${local.ansible_dir}/inventory/my-cluster"
 }
 

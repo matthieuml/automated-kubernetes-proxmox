@@ -24,7 +24,3 @@ provider "proxmox" {
   pm_api_token_secret = var.proxmox_api_token_secret
   pm_tls_insecure     = true
 }
-
-provider "template" {}
-
-provider "local" {}

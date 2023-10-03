@@ -1,5 +1,0 @@
-*
-!my-cluster/
-!my-cluster/hosts.tpl
-!my-cluster/group_vars/
-!my-cluster/group_vars/all.yml

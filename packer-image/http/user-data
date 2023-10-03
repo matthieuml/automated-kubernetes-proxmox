@@ -30,4 +30,4 @@ autoinstall:
         # passwd: your-password
         # - or -
         ssh_authorized_keys:
-          - "ssh-rsa <your-public-key>"
+          - "{{ ssh_key }}"
