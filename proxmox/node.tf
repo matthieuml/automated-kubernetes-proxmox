@@ -25,7 +25,7 @@ resource "proxmox_vm_qemu" "worker_node" {
   agent   = 1
   os_type = "cloud-init"
   sockets = 1
-  cores   = 1
+  cores   = 2
   cpu     = "host"
   memory  = 6144
 

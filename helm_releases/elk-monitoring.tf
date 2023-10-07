@@ -49,6 +49,8 @@ resource "helm_release" "kibana" {
   cleanup_on_fail = true
   force_update    = false
   namespace       = kubernetes_namespace.monitoring.metadata.0.name
+
+  depends_on = [helm_release.elasticsearch]
 }
 
 resource "helm_release" "metricbeat" {
@@ -60,4 +62,6 @@ resource "helm_release" "metricbeat" {
   cleanup_on_fail = true
   force_update    = false
   namespace       = kubernetes_namespace.monitoring.metadata.0.name
+
+  depends_on = [helm_release.elasticsearch]
 }
