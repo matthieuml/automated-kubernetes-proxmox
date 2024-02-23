@@ -24,4 +24,10 @@ resource "local_file" "nodes_inventory" {
   provisioner "local-exec" {
     command = "ANSIBLE_CONFIG=${local.ansible_dir}/ansible.cfg ansible-playbook -i ${local_file.nodes_inventory.filename} ${local.ansible_dir}/site.yml"
   }
+
+  lifecycle {
+    ignore_changes = [
+      content,
+    ]
+  }
 }

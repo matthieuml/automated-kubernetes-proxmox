@@ -13,6 +13,7 @@ autoinstall:
   packages:
     - qemu-guest-agent
     - sudo
+    - nfs-common
   storage:
     layout:
       name: direct

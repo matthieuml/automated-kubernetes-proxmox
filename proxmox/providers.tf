@@ -5,7 +5,7 @@ terraform {
   required_providers {
     proxmox = {
       source  = "telmate/proxmox"
-      version = "2.9.3"
+      version = "3.0.1-rc1"
     }
     template = {
       source  = "hashicorp/template"

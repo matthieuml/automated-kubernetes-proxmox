@@ -18,6 +18,9 @@
 - name: Deploy metallb manifest
   include_tasks: metallb.yml
 
+- name: Deploy OpenEBS manifest
+  include_tasks: openebs.yml
+
 - name: Deploy longhorn manifest
   include_tasks: longhorn.yml
 
