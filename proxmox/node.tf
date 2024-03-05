@@ -17,8 +17,8 @@ resource "proxmox_vm_qemu" "worker_node" {
   tags        = "kube-worker"
 
   # VM Boot Settings
-  onboot   = true
-  os_type  = "cloud-init"
+  onboot  = true
+  os_type = "cloud-init"
 
   # VM System Settings
   agent   = 1
@@ -26,7 +26,7 @@ resource "proxmox_vm_qemu" "worker_node" {
   sockets = 1
   cores   = 2
   cpu     = "host"
-  memory  = 8000
+  memory  = 7000
 
   # VM Storage Settings
   scsihw = "virtio-scsi-single"

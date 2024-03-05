@@ -17,8 +17,8 @@ resource "proxmox_vm_qemu" "master_node" {
   tags        = "kube-master"
 
   # VM Boot Settings
-  onboot   = true
-  os_type  = "cloud-init"
+  onboot  = true
+  os_type = "cloud-init"
 
   # VM System Settings
   agent   = 1
@@ -26,7 +26,7 @@ resource "proxmox_vm_qemu" "master_node" {
   sockets = 1
   cores   = 2
   cpu     = "host"
-  memory  = 8000
+  memory  = 2500
 
   # VM Storage Settings
   scsihw = "virtio-scsi-single"

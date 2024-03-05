@@ -35,7 +35,7 @@ resource "helm_release" "istiod" {
 }
 
 resource "helm_release" "istio_ingress" {
-  name       = "istio-ingress"
+  name       = "istio-ingressgateway"
   repository = "https://istio-release.storage.googleapis.com/charts"
   chart      = "gateway"
 
